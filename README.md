@@ -6,7 +6,7 @@ En este proyecto tomaremos un csv con la informacion de paises y lo convertiremo
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Luispmv/Paises-page.git
 ```
 
 Dirigete al directorio del proyecto
