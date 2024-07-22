@@ -12,7 +12,7 @@ Clone the project
 Dirigete al directorio del proyecto
 
 ```bash
-  cd my-project
+  cd proyecto
 ```
 
 Una vez ubicado en el proyecto crea un nuevo entorno virtual
