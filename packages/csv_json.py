@@ -1,8 +1,7 @@
 import csv
-import json
 
 
-def csv_to_dict(path, name):
+def csv_to_dict(path):
     new_dict = []
     errors = []
     with open(path,"r") as csvfile:
@@ -23,10 +22,14 @@ def csv_to_dict(path, name):
                     except ValueError as error:
                         errors.append(error)
         errors.clear()
+        return new_dict
+    
 
-        for item in new_dict:
-            if item["Country"] == name:
-                new_json = json.dumps(item, indent=4)
-                return new_json
-        return None
+
+def find_country(dict, name):
+    for country in dict:
+        if country["Country"] == name:
+            return country
+        else:
+            None
 
