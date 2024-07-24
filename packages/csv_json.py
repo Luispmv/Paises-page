@@ -25,7 +25,6 @@ def csv_to_dict(path):
         return new_dict
     
 
-
 def find_country(dict, name):
     for country in dict:
         if country["Country"] == name:
@@ -33,3 +32,25 @@ def find_country(dict, name):
         else:
             None
 
+
+def population_kv(dictionary):
+    population_dict = {
+        "2022": dictionary["2022 Population"],
+        "2020": dictionary["2020 Population"],
+        "2015": dictionary["2015 Population"],
+        "2010": dictionary["2010 Population"],
+        "2000": dictionary["2000 Population"],
+        "1990": dictionary["1990 Population"],
+        "1980": dictionary["1980 Population"],
+        "1970": dictionary["1970 Population"]
+    }
+    keys = [item for item in population_dict.keys()]
+    values = [item for item in population_dict.values()]
+    return keys, values
+
+   
+
+new_dictionary = csv_to_dict("../data.csv")
+new_dictionary_country = find_country(new_dictionary, "Mexico")
+new_lists = population_kv(new_dictionary_country)
+print(new_lists)
