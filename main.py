@@ -10,7 +10,7 @@ app = FastAPI()
 app.mount("/images", StaticFiles(directory="images"), name="images")
 
 
-country = "Mexico"
+country = "Indonesia"
 image = "/images/map.png"
 grafico_barras = "/images/barras.png"
 grafico_progresion = "/images/progression.png"
@@ -50,7 +50,7 @@ def render(dict_item):
             </figure>\
             <aside style="background-color: #0B0F17; width: 25%; margin-left: 10px;">\
                 <figure style="margin: 0; position: relative;">\
-                    <img style="width: 100%; height: 170px;" src="https://flagpedia.net/data/flags/h80/mx.webp" alt="Country Flag">\
+                    <img style="width: 100%; height: 170px;" src="{dict_item["Flag"]}" alt="Country Flag">\
                     <div style="background-color: #0B0F17; color: white; position: absolute; top: 0; right: 0; padding: 0.7rem; text-align: center; border-bottom-left-radius: 40px;">\
                         <p style="margin: 0;">Rank</p>\
                         <p style="margin: 0;">{dict_item["Rank"]}</p>\
