@@ -1,4 +1,4 @@
-from packages import csvread as cvj
+from packages import csv_json as cvj
 from packages import dataview as dtv
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse

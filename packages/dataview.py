@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from packages import csvread as cvj
+# import csv_json as cv
 
 
 def barras(tupla):
@@ -56,10 +56,13 @@ def pie(dictionary, dictionary_item):
     # plt.show()
     plt.savefig("pie.png")
 
-new_dictionary = cvj.csv_to_dict("./data.csv")
-new_dictionary_country = cvj.find_country(new_dictionary, "Mexico")
-new_lists = cvj.population_kv(new_dictionary_country)
-# grafica_barras = barras(new_lists)
-# progression(new_dictionary_country["Density"])
-pie_chart = pie(new_dictionary, new_dictionary_country)
-print(pie_chart)
+
+
+#Este codigo lo podemos pasar a main.py
+# new_dictionary = cv.csv_to_dict("../data.csv")
+# new_dictionary_country = cv.find_country(new_dictionary, "Mexico")
+# new_lists = cv.population_kv(new_dictionary_country)
+# # grafica_barras = barras(new_lists)
+# # progression(new_dictionary_country["Density"])
+# pie_chart = pie(new_dictionary, new_dictionary_country)
+# print(pie_chart)
