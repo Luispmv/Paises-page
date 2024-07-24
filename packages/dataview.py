@@ -14,8 +14,8 @@ def barras(tupla):
     plt.title("Población a través de los años", color="white")
     ax.tick_params(axis='x', colors='white')
     ax.tick_params(axis='y', colors=main_color)
-    # plt.savefig("barras.png")
-    plt.show()
+    plt.savefig("images/barras.png")
+    # plt.show()
 
 
 def progression(n):
@@ -38,7 +38,7 @@ def progression(n):
     ax.set_xlabel('Índice', color=main_color)
     ax.set_ylabel('Valor', color=main_color)
     # plt.show()
-    plt.savefig("progression.png")
+    plt.savefig("images/progression.png")
 
 def pie(dictionary, dictionary_item):
     main_color = "#0B0F17"
@@ -54,7 +54,7 @@ def pie(dictionary, dictionary_item):
     ax.set_facecolor(main_color) 
     # plt.title(f"Poblacion mundial de {formatted_number}", color='white') 
     # plt.show()
-    plt.savefig("pie.png")
+    plt.savefig("images/pie.png")
 
 
 
