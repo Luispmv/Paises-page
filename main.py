@@ -10,8 +10,8 @@ app = FastAPI()
 app.mount("/images", StaticFiles(directory="images"), name="images")
 
 
-country = "India"
-image = "https://www.google.com/maps/vt/data=biY_M2bGuTEXA-mtsjF1PuXt-g4h8ApuAl_2DVBZpdDV5Yj-EKALv1CWQSEzZu5JDBFPYMaR2VJ-F-lkeo3XHAMNOCBgsQoeJeifFfWrS83sPL23p5kXvSTC2jIqFSg-KMOst8oin7h-t7fa8nNOAtjJK_PwO7cSAVGSk9geegPsw-PIV1LJufllsXGG29EkY1K0zRwKT8XOf8zujxaQhluLO9Z2Hn2DvZfXQwadn6-6ph8TZMey2K5VWaJC176gfVEmFfGZeWWSHQ6IcL3r02DwFb9z6Q"
+country = "Mexico"
+image = "/images/map.png"
 grafico_barras = "/images/barras.png"
 grafico_progresion = "/images/progression.png"
 grafico_pastel = "/images/pie.png"
