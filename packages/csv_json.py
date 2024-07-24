@@ -3,7 +3,6 @@ import csv
 
 def csv_to_dict(path):
     new_dict = []
-    errors = []
     with open(path,"r") as csvfile:
         reader = csv.reader(csvfile, delimiter=",")
         column = next(reader)
@@ -20,8 +19,7 @@ def csv_to_dict(path):
                     try:
                         pais[key] = float(value)
                     except ValueError as error:
-                        errors.append(error)
-        errors.clear()
+                        pass
         return new_dict
     
 
@@ -47,10 +45,3 @@ def population_kv(dictionary):
     keys = [item for item in population_dict.keys()]
     values = [item for item in population_dict.values()]
     return keys, values
-
-   
-
-new_dictionary = csv_to_dict("../data.csv")
-new_dictionary_country = find_country(new_dictionary, "Mexico")
-new_lists = population_kv(new_dictionary_country)
-print(new_lists)
