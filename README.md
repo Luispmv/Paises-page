@@ -1,5 +1,5 @@
 # Paises-Page
-![Descripción de la imagen](/images/Dashboard.png)
+![Dashboard](./images/Dashboard.png)
 
 
 En este proyecto tomaremos un csv con la informacion de paises y lo convertiremos a una pagina web.
