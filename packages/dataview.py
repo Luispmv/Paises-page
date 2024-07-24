@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
-import csv_json as cvj
+from packages import csvread as cvj
+
 
 def barras(tupla):
     main_color = "#0B0F17"
@@ -55,7 +56,7 @@ def pie(dictionary, dictionary_item):
     # plt.show()
     plt.savefig("pie.png")
 
-new_dictionary = cvj.csv_to_dict("../data.csv")
+new_dictionary = cvj.csv_to_dict("./data.csv")
 new_dictionary_country = cvj.find_country(new_dictionary, "Mexico")
 new_lists = cvj.population_kv(new_dictionary_country)
 # grafica_barras = barras(new_lists)
