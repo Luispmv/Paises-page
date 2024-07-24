@@ -1,9 +1,5 @@
 import folium
 
-
-
-
-
 def createMapaPlot(ubicacion):
     m = folium.Map(location=ubicacion, 
             zoom_start=5,
