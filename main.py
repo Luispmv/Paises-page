@@ -1,3 +1,4 @@
+import os
 from packages import csv_json as cvj
 from packages import dataview as dtv
 from fastapi import FastAPI
@@ -25,6 +26,20 @@ def oneCountry():
     dictionary = cvj.csv_to_dict("data.csv")  # Inicializar dictionary dentro de la función
     calling = cvj.find_country(dictionary, country)
     return calling
+
+
+def create_plots():
+    new_dictionary = cvj.csv_to_dict("data.csv")
+    new_dictionary_country = cvj.find_country(new_dictionary, country)
+    new_tuple = cvj.population_kv(new_dictionary_country)
+    if not os.path.exists("images"):
+        os.makedirs("images")
+    bar_chart = dtv.barras(new_tuple)
+    grow_chart = dtv.progression(new_dictionary_country["Density"])
+    pie_chart = dtv.pie(new_dictionary, new_dictionary_country)
+    return bar_chart, grow_chart, pie_chart
+
+create_plots()
 
 def render(dict_item):
     return f'<body style="background-color: #06080C; display: grid; place-items: center; font-family: Impact, Haettenschweiler;">\
@@ -60,6 +75,6 @@ def render(dict_item):
 
 @app.get("/Template", response_class=HTMLResponse)
 def renderize():
-    dictionary = cvj.csv_to_dict("data.csv")  # Inicializar dictionary dentro de la función
-    dict_item = cvj.find_country(dictionary, country)  # Obtener dict_item dentro de la función
+    dictionary = cvj.csv_to_dict("data.csv")  
+    dict_item = cvj.find_country(dictionary, country) 
     return render(dict_item)
