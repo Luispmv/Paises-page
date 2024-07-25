@@ -1,6 +1,7 @@
 import os
 from packages import csv_json as cvj
 from packages import dataview as dtv
+from packages import mapaplots as mpp
 from fastapi import FastAPI
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
@@ -8,13 +9,15 @@ from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 app.mount("/images", StaticFiles(directory="images"), name="images")
+app.mount("/Frame", StaticFiles(directory="Frame"), name="Frame")
 
 
-country = "Indonesia"
+country = "Colombia"
 image = "/images/map.png"
 grafico_barras = "/images/barras.png"
 grafico_progresion = "/images/progression.png"
 grafico_pastel = "/images/pie.png"
+FrameMap = "/Frame/map.html"
 
 @app.get("/")
 def run():
@@ -27,6 +30,14 @@ def oneCountry():
     calling = cvj.find_country(dictionary, country)
     return calling
 
+def createMapFrame():
+    cordenadas = mpp.cordenadas()
+    mapa = mpp.createMapaPlot(cordenadas[country])
+    if not os.path.exists("Frame"):
+        os.makedirs("Frame")
+    return mapa
+
+createMapFrame()
 
 def create_plots():
     new_dictionary = cvj.csv_to_dict("data.csv")
@@ -46,7 +57,7 @@ def render(dict_item):
     <main style="width: 100%; max-width: 1300px;">\
         <header style="display: flex; justify-content: space-around;">\
             <figure style="width: 75%; margin: 0;">\
-                <img style="width: 100%; height: 100%;" src="{image}" alt="Grafico del pais">\
+                <iframe src="{FrameMap}" width="100%" height="100%" frameborder="0"></iframe>\
             </figure>\
             <aside style="background-color: #0B0F17; width: 25%; margin-left: 10px;">\
                 <figure style="margin: 0; position: relative;">\
