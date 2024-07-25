@@ -12,7 +12,7 @@ app.mount("/images", StaticFiles(directory="images"), name="images")
 app.mount("/Frame", StaticFiles(directory="Frame"), name="Frame")
 
 
-country = "Brazil" # Coloca el nombre de un pais
+country = "United States" # Coloca el nombre de un pais
 image = "/images/map.png"
 grafico_barras = "/images/barras.png"
 grafico_progresion = "/images/progression.png"
@@ -53,21 +53,21 @@ def create_plots():
 create_plots()
 
 def render(dict_item):
-    return f'<body style="background-color: #06080C; display: grid; place-items: center; font-family: Impact, Haettenschweiler;">\
+    return f'<body style="background-color: black; display: grid; place-items: center; font-family: Impact, Haettenschweiler;">\
     <main style="width: 100%; max-width: 1300px;">\
         <header style="display: flex; justify-content: space-around;">\
             <figure style="width: 75%; margin: 0;">\
                 <iframe src="{FrameMap}" width="100%" height="100%" frameborder="0"></iframe>\
             </figure>\
-            <aside style="background-color: #0B0F17; width: 25%; margin-left: 10px;">\
-                <figure style="margin: 0; position: relative;">\
+            <aside style="background-color: #262626; width: 25%; margin-left: 10px;">\
+                <figure style="margin: 0; position: relative; padding: 1rem;">\
                     <img style="width: 100%; height: 170px;" src="{dict_item["Flag"]}" alt="Country Flag">\
-                    <div style="background-color: #0B0F17; color: white; position: absolute; top: 0; right: 0; padding: 0.7rem; text-align: center; border-bottom-left-radius: 40px;">\
+                    <div style="background-color: black; color: white; position: absolute; top: 0; right: 0; padding: 0.7rem; text-align: center; border-bottom-left-radius: 40px;">\
                         <p style="margin: 0;">Rank</p>\
                         <p style="margin: 0;">{dict_item["Rank"]}</p>\
                     </div>\
                 </figure>\
-                <article style="color: white; padding-left: 1rem;">\
+                <article style="color: black; padding-left: 1rem;">\
                     <p style="font-size: 30px;">{dict_item["Country"]}</p>\
                     <p style="font-size: 30px;">{dict_item["Capital"]}</p>\
                     <p style="font-size: 30px;">{dict_item["Continent"]}</p>\
@@ -77,9 +77,9 @@ def render(dict_item):
             </aside>\
         </header>\
         <footer style="display: flex; justify-content: space-between; gap: 10px;">\
-            <figure style="width: 100%; height: 350px; background-color: #0B0F17; margin-left: 0px; margin-right: 0px;"><img style="width: 100%; height: 100%; object-fit:contain" src="{grafico_barras}" alt="grafico_barras"></figure>\
-            <figure style="width: 100%; height: 350px; background-color: #0B0F17; margin-left: 0px; margin-right: 0px;"><img style="width: 100%; height: 100%; object-fit:contain" src="{grafico_progresion}" alt="grafico_progresion"></figure>\
-            <figure style="width: 100%; height: 350px; background-color: #0B0F17; margin-left: 0px; margin-right: 0px;"><img style="width: 100%; height: 100%; object-fit:contain" src="{grafico_pastel}" alt="grafico_progresion"></figure>\
+            <figure style="width: 100%; height: 350px; background-color: #262626; margin-left: 0px; margin-right: 0px;"><img style="width: 100%; height: 100%; object-fit:contain" src="{grafico_barras}" alt="grafico_barras"></figure>\
+            <figure style="width: 100%; height: 350px; background-color: #262626; margin-left: 0px; margin-right: 0px;"><img style="width: 100%; height: 100%; object-fit:contain" src="{grafico_progresion}" alt="grafico_progresion"></figure>\
+            <figure style="width: 100%; height: 350px; background-color: #262626; margin-left: 0px; margin-right: 0px;"><img style="width: 100%; height: 100%; object-fit:contain" src="{grafico_pastel}" alt="grafico_progresion"></figure>\
         </footer>\
     </main>\
 </body>'
