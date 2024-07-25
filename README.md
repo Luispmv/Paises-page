@@ -51,8 +51,10 @@ Una vez instalamos las dependencias corremos nuestro servidor FastAPI
 
 Para poder ver la informacion de un pais en especifco nos dirigimos a main.py y cambiamos la variable country por el pais cuyos datos querramos ver:
 ```python
-country = "Mexico"
+#main.py
 
+country = "Mexico"
+```
 
 ***
 ## Corriendo el proyecto en un contendor Docker
