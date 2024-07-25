@@ -85,3 +85,10 @@ Sabiendo esto para poder ver reflejado en el servidor FastAPI los cambios que ha
 ```bash
   docker-compose exec paises bash
 ```
+
+o tambien puedes correr solamente
+```bash
+  docker-compose restart
+```
+
+Al dirigirte a localhost en tu navegador veras los cambios reflejados
