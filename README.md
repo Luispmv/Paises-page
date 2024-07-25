@@ -63,7 +63,7 @@ Con los archivos Dockerfile y docker-compose.yml creados lo que haremos sera ejc
 ```
 
 Una vez corremos los comandos anteriores tenemos nuestro contenedor montado.
-#
+***
 ## Manejando cambios en un contenedor Docker
 
 En el archivo docker-compose.yml tenemos la instruccion volumes, esta nos permite actualizar nuestro contenedor a los cambios que hagamos en proyecto.
