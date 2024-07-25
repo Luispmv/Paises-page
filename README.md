@@ -53,7 +53,7 @@ Para poder ver la informacion de un pais en especifco nos dirigimos a main.py y 
 ```python
 #main.py
 
-country = "Mexico" # Cmbia el nombre del pais al de tu preferencia y ve los cambios reflejados
+country = "Mexico" # Cambia el nombre del pais al de tu preferencia y ve los cambios reflejados
 ```
 
 ***
