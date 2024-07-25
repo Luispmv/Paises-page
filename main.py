@@ -12,14 +12,14 @@ app.mount("/images", StaticFiles(directory="images"), name="images")
 app.mount("/Frame", StaticFiles(directory="Frame"), name="Frame")
 
 
-country = "Colombia"
+country = "Brazil" # Coloca el nombre de un pais
 image = "/images/map.png"
 grafico_barras = "/images/barras.png"
 grafico_progresion = "/images/progression.png"
 grafico_pastel = "/images/pie.png"
 FrameMap = "/Frame/map.html"
 
-@app.get("/")
+@app.get("/JSON")
 def run():
     call = cvj.csv_to_dict("data.csv")
     return call
@@ -84,7 +84,7 @@ def render(dict_item):
     </main>\
 </body>'
 
-@app.get("/Template", response_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse)
 def renderize():
     dictionary = cvj.csv_to_dict("data.csv")  
     dict_item = cvj.find_country(dictionary, country) 
