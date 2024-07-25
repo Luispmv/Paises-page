@@ -1,6 +1,7 @@
 # Paises-Page
 En este proyecto tomaremos un csv con la informacion de paises y lo convertiremos a una pagina web.
 
+***
 ## Corre el proyecto en tu maquina
 
 Clone the project
@@ -48,6 +49,7 @@ Una vez instalamos las dependencias corremos nuestro servidor FastAPI
   uvicorn main:app --reload
 ```
 
+***
 ## Corriendo el proyecto en un contendor Docker
 
 Con los archivos Dockerfile y docker-compose.yml creados lo que haremos sera ejcutar los siguientes comandos para montar nuestro contenedor
@@ -63,6 +65,7 @@ Con los archivos Dockerfile y docker-compose.yml creados lo que haremos sera ejc
 ```
 
 Una vez corremos los comandos anteriores tenemos nuestro contenedor montado.
+
 ***
 ## Manejando cambios en un contenedor Docker
 
