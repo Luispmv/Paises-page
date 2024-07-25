@@ -3,16 +3,16 @@ import matplotlib.pyplot as plt
 
 
 def barras(tupla):
-    main_color = "#0B0F17"
+    main_color = "#262626"
     label, value = tupla
     fig, ax = plt.subplots(facecolor='lightblue')
     ax.set_facecolor(main_color)
     for spine in ax.spines.values():
         spine.set_visible(False)
-    ax.bar(label, value, color='white')
+    ax.bar(label, value, color='black')
     fig.patch.set_facecolor(main_color)
-    plt.title("Población a través de los años", color="white")
-    ax.tick_params(axis='x', colors='white')
+    plt.title("Población a través de los años", color="black")
+    ax.tick_params(axis='x', colors='black')
     ax.tick_params(axis='y', colors=main_color)
     plt.savefig("images/barras.png")
     # plt.show()
@@ -20,7 +20,7 @@ def barras(tupla):
 
 def progression(n):
     try:
-        main_color = "#0B0F17"
+        main_color = "#262626"
         data = int(n)
         x = list(range(data))
         y = [2 ** i for i in x] 
@@ -29,13 +29,13 @@ def progression(n):
         ax.set_facecolor(main_color)
         for spine in ax.spines.values():
             spine.set_visible(False)
-        plt.plot(x, y, marker='o', color="white", linestyle='-', markersize=8)
-        plt.title('Tasa de Crecimiento Poblacional', color="white")
+        plt.plot(x, y, marker='o', color="black", linestyle='-', markersize=8)
+        plt.title('Tasa de Crecimiento Poblacional', color="black")
         plt.xlabel('Índice')
         plt.ylabel('Valor')
-        plt.grid(True)
-        ax.tick_params(axis='x', colors="white")
-        ax.tick_params(axis='y', colors="white") 
+        plt.grid(True, color="black")
+        ax.tick_params(axis='x', colors="black")
+        ax.tick_params(axis='y', colors="black") 
         ax.set_xlabel('Índice', color=main_color)
         ax.set_ylabel('Valor', color=main_color)
         # plt.show()
@@ -44,14 +44,14 @@ def progression(n):
         pass
 
 def pie(dictionary, dictionary_item):
-    main_color = "#0B0F17"
+    main_color = "#262626"
     percentage = dictionary_item["World Population Percentage"]
     suma = sum(population["2022 Population"] for population in dictionary)
     formatted_number = f"{suma:,}"
     values = [percentage, 100 - percentage]
     labels = [f"{dictionary_item['Country']} ({percentage}%)", f"Rest of the world ({100 - percentage}%)"]
     fig, ax = plt.subplots()
-    ax.pie(values, labels=labels, autopct='%1.1f%%', startangle=90, colors=[main_color, 'white'], textprops={'color': 'white'})
+    ax.pie(values, labels=labels, autopct='%1.1f%%', startangle=90, colors=[main_color, 'black'], textprops={'color': 'black'})
     ax.axis('equal')
     fig.patch.set_facecolor(main_color) 
     ax.set_facecolor(main_color) 
