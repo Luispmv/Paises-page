@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_795ceac8b960dafd039b572d0bc466a1 {
+                #map_af7d1538fd3586a8a8ede5df29e3dc4c {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,18 +39,18 @@
 <body>
     
     
-            <div class="folium-map" id="map_795ceac8b960dafd039b572d0bc466a1" ></div>
+            <div class="folium-map" id="map_af7d1538fd3586a8a8ede5df29e3dc4c" ></div>
         
 </body>
 <script>
     
     
-            var map_795ceac8b960dafd039b572d0bc466a1 = L.map(
-                "map_795ceac8b960dafd039b572d0bc466a1",
+            var map_af7d1538fd3586a8a8ede5df29e3dc4c = L.map(
+                "map_af7d1538fd3586a8a8ede5df29e3dc4c",
                 {
-                    center: [40.54419400668234, -102.93430316168637],
+                    center: [54.07043342859852, -2.555971293972299],
                     crs: L.CRS.EPSG3857,
-                    zoom: 5,
+                    zoom: 4,
                     zoomControl: true,
                     preferCanvas: false,
                 }
@@ -60,13 +60,34 @@
 
         
     
-            var tile_layer_5652011cce295b6095116d0297dbeccd = L.tileLayer(
+            var tile_layer_d7063c325964776852a8b97a886474b1 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             );
         
     
-            tile_layer_5652011cce295b6095116d0297dbeccd.addTo(map_795ceac8b960dafd039b572d0bc466a1);
+            tile_layer_d7063c325964776852a8b97a886474b1.addTo(map_af7d1538fd3586a8a8ede5df29e3dc4c);
+        
+    
+            var circle_099b0b1f2970e2a068bb421ed01bc9d7 = L.circle(
+                [54.07043342859852, -2.555971293972299],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 50000, "stroke": true, "weight": 3}
+            ).addTo(map_af7d1538fd3586a8a8ede5df29e3dc4c);
+        
+    
+            var layer_control_399012950c86f91911fd05ef314f034c_layers = {
+                base_layers : {
+                    "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" : tile_layer_d7063c325964776852a8b97a886474b1,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_399012950c86f91911fd05ef314f034c = L.control.layers(
+                layer_control_399012950c86f91911fd05ef314f034c_layers.base_layers,
+                layer_control_399012950c86f91911fd05ef314f034c_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_af7d1538fd3586a8a8ede5df29e3dc4c);
+
         
 </script>
 </html>
