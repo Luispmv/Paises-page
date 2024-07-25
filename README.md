@@ -6,7 +6,7 @@ En este proyecto tomaremos un csv con la informacion de paises y lo convertiremo
 ***
 ## Corre el proyecto en tu maquina
 
-Clone the project
+Clona el proyecto
 
 ```bash
   git clone https://github.com/Luispmv/Paises-page.git
@@ -18,7 +18,7 @@ Dirigete al directorio del proyecto
   cd proyecto
 ```
 
-Una vez ubicado en el proyecto crea un nuevo entorno virtual
+Crea un nuevo entorno virtual
 ```bash
   python3 -m venv env
 ```
