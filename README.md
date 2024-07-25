@@ -42,3 +42,36 @@ Instala las dependencias del proyecto
 ```bash
   pip install -r requirements.txt
 ```
+
+Una vez instalamos las dependencias corremos nuestro servidor FastAPI
+```bash
+  uvicorn main:app --reload
+```
+
+## Corriendo el proyecto en un contendor Docker
+
+Con los archivos Dockerfile y docker-compose.yml creados lo que haremos sera ejcutar los siguientes comandos para montar nuestro contenedor
+
+```bash
+  docker-compose build
+```
+```bash
+  docker-compose up -d
+```
+```bash
+  docker-compose ps
+```
+
+Una vez corremos los comandos anteriores tenemos nuestro contenedor montado.
+
+## Manejando cambios en un contenedor Docker
+
+En el archivo docker-compose.yml tenemos la instruccion volumes, esta nos permite actualizar nuestro contenedor a los cambios que hagamos en proyecto.
+Sabiendo esto para poder ver reflejado en el servidor FastAPI los cambios que hagamos corremos los siguientes comandos:
+
+```bash
+  docker-compose restart
+```
+```bash
+  docker-compose exec paises bash
+```
