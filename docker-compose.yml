@@ -1,0 +1,9 @@
+services:
+  paises:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes: 
+      - .:/paises
+    ports:
+      - '80:80'
