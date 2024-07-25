@@ -1,6 +1,8 @@
 # Paises-Page
 En este proyecto tomaremos un csv con la informacion de paises y lo convertiremos a una pagina web.
 
+![App Screenshot](https://i.imgur.com/m9p3Xrg.png)
+
 ***
 ## Corre el proyecto en tu maquina
 
